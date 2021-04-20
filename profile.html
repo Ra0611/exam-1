@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin panel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="wrapper col m3 l2">
+            <nav class=" grey lighten-3 nav-box">
+                <div class="nav-wrap">
+                    <ul class="right grey-text text-darken-4 nav-box__menu">
+                        <li class="heding-item">
+                            <h5 class="grey-text text-darken-3">Company</h5>
+                        </li>
+                        <li><img src="images/dashboard_gray.svg" alt="icon" class="normal">
+                            <img src="images/dashboard_white.svg" alt="icon" class="hover"><a
+                                class="menu-link grey-text text-darken-4" href="index.html">
+                                Dashboard</a>
+                        </li>
+                        <li><img src="images/account_gray.svg" alt="icon" class="normal">
+                            <img src="images/account_white.svg" alt="icon" class="hover"><a
+                                class="menu-link grey-text text-darken-4" href="#">User
+                                profile</a>
+                        </li>
+                        <li><img src="images/map_gray.svg" alt="icon" class="normal">
+                            <img src="images/map_white.svg" alt="icon" class="hover"><a
+                                class="menu-link grey-text text-darken-4" href="#">Maps</a>
+                        </li>
+                        <li><img src="images/notify_gray.svg" alt="icon" class="normal">
+                            <img src="images/notify_white.svg" alt="icon" class="hover"><a
+                                class="menu-link grey-text text-darken-4" href="#">Notifications</a>
+                        </li>
+                        <li><img src="images/support_gray.svg" alt="icon" class="normal">
+                            <img src="images/support_white.svg" alt="icon" class="hover"><a
+                                class="menu-link grey-text text-darken-4" href="#">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="side-nav" id="mobile-demo">
+                    <li class="heding-item">
+                        <h5 class="heding grey-text text-darken-4">Company</h5>
+                    </li>
+                    <li><img src="images/dashboard_gray.svg" alt="icon" class="normal">
+                        <img src="images/dashboard_white.svg" alt="icon" class="hover"><a
+                            class="menu-link grey-text text-darken-4" href="#">
+                            Dashboard</a>
+                    </li>
+                    <li><img src="images/account_gray.svg" alt="icon" class="normal">
+                        <img src="images/account_white.svg" alt="icon" class="hover"><a
+                            class="menu-link grey-text text-darken-4" href="blog.html">User
+                            profile</a>
+                    </li>
+                    <li><img src="images/map_gray.svg" alt="icon" class="normal">
+                        <img src="images/map_white.svg" alt="icon" class="hover"><a
+                            class="menu-link grey-text text-darken-4" href="contact.html">Maps</a>
+                    </li>
+                    <li><img src="images/notify_gray.svg" alt="icon" class="normal">
+                        <img src="images/notify_white.svg" alt="icon" class="hover"><a
+                            class="menu-link grey-text text-darken-4" href="blog.html">Notifications</a>
+                    </li>
+                    <li><img src="images/support_gray.svg" alt="icon" class="normal">
+                        <img src="images/support_white.svg" alt="icon" class="hover"><a
+                            class="menu-link grey-text text-darken-4" href="contact.html">Support</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="wrapper col s12 m9 l10 ">
+            <main class="main contact-main">
+                <div class="main-heading">
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i
+                            class="material-icons grey-text text-darken-4">menu</i></a>
+                    <h5 class="heading">Dashboard</h5>
+                </div>
+                <div class="row">
+                    <div class="card-wrap col m8">
+                        <div class="card horizontal data__card">
+                            <div class="card-menu pink darken-3">
+                                <h5 class="stats-title grey-text text-lighten-5">Edit profile</h5>
+                                <span class="stats-subtitle grey-text text-lighten-5">Complete your profile</span>
+                            </div>
+                            <div class="card-stacked">
+                                <div class="row">
+                                    <form class="col s12">
+                                      <div class="row">
+                                        <div class="input-field col s4">
+                                          <input id="company" type="text" class="validate">
+                                          <label for="company">Company</label>
+                                        </div>
+                                        <div class="input-field col s4">
+                                          <input id="username" type="text" class="validate">
+                                          <label for="username">Username</label>
+                                        </div>
+                                        <div class="input-field col s4">
+                                            <input id="email" type="email" class="validate">
+                                            <label for="email">Email address</label>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="input-field col s6">
+                                            <input id="first_name" type="text" class="validate">
+                                            <label for="first_name">First name</label>
+                                          </div>
+                                          <div class="input-field col s6">
+                                            <input id="last_name" type="text" class="validate">
+                                            <label for="last_name">Last name</label>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="input-field col s12">
+                                          <input id="address" type="text" class="validate">
+                                          <label for="address">Address</label>
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="row">
+                                        <div class="input-field col s4">
+                                            <input id="city" type="text" class="validate">
+                                            <label for="city">City</label>
+                                        </div>
+                                        <div class="input-field col s4">
+                                            <input id="country" type="text" class="validate">
+                                            <label for="country">Country</label>
+                                        </div>
+                                        <div class="input-field col s4">
+                                              <input id="postel-code" type="text" class="validate">
+                                              <label for="postel-code">Postel code</label>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                          <form>
+                                            <div class="input-field col s12">
+                                              <textarea id="textarea" class="materialize-textarea"></textarea>
+                                              <label for="textarea">About me</label>
+                                            </div>
+                                        </form>
+                                      </div>
+                                    </form>
+                                    <div class="contact-btn">
+                                        <button class="btn waves-effect waves-light pink darken-3" type="submit" name="action">Update profile
+                                        </button>
+                                    </div>
+                                  </div>
+                                  
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="card-wrap col  m4">
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img src="images/portrait.png">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-text">
+                                    <h6>SEO / CO-FOUNDER</h6>
+                                    <span class="autor">Alec Thompson</span>
+                                    <blockquote>
+                                        <p>Don't be scared of the truth becouse we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens' bed design but the back is...</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            <footer class="footer">
+                <nav class="grey lighten-3">
+                    <div class="nav-wrapper">
+                        <span class="footer-text">2019 - made with love</span>
+                        <!-- <a href="#" class=" ">Logo</a> -->
+                        <ul id="nav-mobile" class="left footer-list">
+                            <li class="footer-item"><a href="sass.html">about</a></li>
+                            <li class="footer-item"><a href="badges.html">blog</a></li>
+                            <li class="footer-item"><a href="collapsible.html">licenses</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </footer>
+        </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/my_screepts.js"></script>
+</body>
+
+</html>

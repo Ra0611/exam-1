@@ -1,4 +1,11 @@
 
+@function width-menu() {
+    @return 100%-83.34%;
+}
+@function width-men__min() {
+    @return 100%-75%;
+}
+
 body{
     font-family: Segoe UI, sans-serif;
     background: rgb(236, 236, 236);
@@ -10,22 +17,15 @@ padding: 0 !important;
 border: 0;
 }
 
+input{
+    opacity: 1 !important;
+    position: static !important;
+    
+}
 #sidenav-overlay {
     position: static;
     /*отключаем шторку sidenava*/
   }
-.card-image--green{
-    background-color: rgb(68, 139, 0);
-}
-.card-image--yelow{
-    background-color: rgb(216, 158, 36);
-}
-.card-image--blue{
-    background-color: rgb(39, 77, 151);
-}
-.card-image--red{
-    background-color: rgb(195, 32, 86);
-}
 
 .row{
     display: flex;
@@ -42,15 +42,20 @@ border: 0;
 .nav-box__menu, .side-nav{
     display: flex;
     flex-direction: column;
+    width: width-menu();
     position: fixed;
     top: 0;
     left: 0;
     li{
         max-width: 100%;
         display: flex;
+        justify-content: start;
         padding: 0 10%;
         img{
             width: 1.5rem;
+        }
+        a{
+            padding: 0 0 0 10px;
         }
         img.hover{
             display: none;
@@ -66,15 +71,16 @@ border: 0;
             a{
                 background: none;
                 &:hover{
-                    color: whitesmoke !important;
+                    color: white !important;
                 }
             }
         }
         &.heding-item{
-            padding: 3em 2em;
+            padding: 1.5em 2em;
             border-bottom: solid 2px gray;
             h5{
                 font-weight: bold;
+                margin: 0.5em 0;
             }
         }
         &.heding-item:hover{
@@ -82,8 +88,14 @@ border: 0;
         }
     }
 }
+
+@media screen and (max-width: 992px){
+    .nav-box__menu, .side-nav {
+        width: width-men__min();
+    }
+}   
 .l10{
-    box-shadow: 1px 0 4px #424242;
+    box-shadow: inset 1px -3px 3px 1px #959595;
 }
 @media screen and (max-width: 800px){
     .nav-wrap {
@@ -103,7 +115,7 @@ border: 0;
         display: flex;
         align-items: center;
         margin: 0;
-        padding: 2.5% 1.5%;
+        padding: 1% 1.5% 2.5%;
         a{
             margin: 1em;
         }
@@ -114,7 +126,7 @@ border: 0;
     }
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 801px){
     .main{
         &-heading{
             a.button-collapse{
@@ -346,8 +358,6 @@ ul.card-nav{
             }
         }
         input{
-            opacity: 1 !important;
-            position: static !important;
             background-color: rgb(236, 236, 236) !important;
             
         }
@@ -468,6 +478,8 @@ li.bugs-item{
 }
 
 .footer {
+    width: 99.3%;
+    margin: auto;
     margin-top: 5rem;
     border-top: solid 1px #bdbdbd;
     nav{
@@ -532,3 +544,87 @@ li.bugs-item{
         font-size: 0.7em;
     }
 }
+
+.contact-main{
+    form{
+        input{
+            margin: 0 0 10px;
+        }
+        .input-field{
+            margin-top: 0;
+        }
+        .materialize-textarea{
+            padding: 5px;
+        }
+    }
+    .contact-btn{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    button{
+        margin: 1em 0;
+        
+    }
+}
+
+.contact-main{
+    .card{
+        margin: 0;
+    }
+    .card-wrap{
+        margin: 2em 0;
+        .data__card{
+            margin: 0;
+        }
+        .card-image{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0 0 6px 1px #424242;
+            overflow: hidden;
+            position: absolute !important;
+            left: 50%;
+            top: -30px;
+            transform: translateX(-50%);
+            img{
+                object-fit: cover;
+                font-size: 100%;
+            }
+        }
+        .card-text{
+            margin: 5em 0 1em;
+            text-align: center;
+            h6{
+                margin: 0.5em 0;
+            }
+            .autor{
+                font-weight: bold;
+            }
+        }
+        blockquote{
+            padding-left: 0;
+            border-left: none;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    }
+
+}
+@media screen and (max-width: 1000px){
+    .contact-main{
+        >.row{
+            display: flex;
+            flex-direction: column-reverse;
+            .card-wrap{
+                width: 100%;
+            }
+            p{
+                font-size: 1.2em;
+            }
+        }
+        
+    }
+}
+    
+
