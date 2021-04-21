@@ -2,14 +2,22 @@
 @function width-menu() {
     @return 100%-83.34%;
 }
-@function width-men__min() {
+@function width-menu__min() {
     @return 100%-75%;
 }
-
+@function width-menu__xs() {
+    @return 100%-50%;
+}
+@mixin flexible () {
+    display: flex;
+  }
 body{
     font-family: Segoe UI, sans-serif;
     background: rgb(236, 236, 236);
     color: #424242;
+}
+.row-body{
+    margin: 0 !important;
 }
 .wrapper{
 margin: 0;
@@ -28,19 +36,24 @@ input{
   }
 
 .row{
-    display: flex;
+    @include flexible ();
+    flex-wrap: wrap;
     margin-bottom: 0;
 }
+@media screen and (min-width: 992px){
+    .row{
+        margin-bottom: 1.5%;
+    }
+} 
 .nav-box{
     height: 100% !important;
 }
 .nav-wrap {
-    width: 100%;
     height: 100%;   
 }
 
 .nav-box__menu, .side-nav{
-    display: flex;
+    @include flexible ();
     flex-direction: column;
     width: width-menu();
     position: fixed;
@@ -48,7 +61,7 @@ input{
     left: 0;
     li{
         max-width: 100%;
-        display: flex;
+        @include flexible ();
         justify-content: start;
         padding: 0 10%;
         img{
@@ -91,7 +104,12 @@ input{
 
 @media screen and (max-width: 992px){
     .nav-box__menu, .side-nav {
-        width: width-men__min();
+        width: width-menu__min();
+    }
+} 
+@media screen and (max-width: 550px){
+    .nav-box__menu, .side-nav {
+        width: width-menu__xs();
     }
 }   
 .l10{
@@ -112,7 +130,7 @@ input{
 .main{
     margin: 0;
     &-heading{
-        display: flex;
+        @include flexible ();
         align-items: center;
         margin: 0;
         padding: 1% 1.5% 2.5%;
@@ -135,10 +153,7 @@ input{
         }
     }
 }
-.row{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .card.horizontal{
     .card-image{
         max-width: 100%;
@@ -198,14 +213,15 @@ input{
 }
 
 .grafics__row{
+    margin-bottom: 2%;
     .card-wrap{
-        display: flex;
+        @include flexible ();
     }
 }
 
 .grafics__card{
     margin: 5% 0;
-    display: flex;
+    @include flexible ();
     flex-direction: column;
     .card-image{
         padding: 10px;
@@ -222,9 +238,9 @@ input{
             font-size: 2.45em;
         }
     }
-}
-.grafics-text{
-    font-size: 1.5em;
+    .grafics-text{
+        font-size: 1.5em;
+    }
 }
 
 @media screen and (max-width: 895px){
@@ -286,10 +302,10 @@ input{
     }
 }
 .container-data {
-
     .data__row {
+        @include flexible ();
         .card-wrap{
-            display: flex;
+            @include flexible ();
             .card{
                 width: 100%;
                 height: 100%;
@@ -304,12 +320,9 @@ input{
 
 }
 
-.data__row{
-    display: flex;
-}
 .data__card{
     margin: 3% 0;
-    display: flex;
+    @include flexible ();
     flex-direction: column;
     .card-menu{
         padding: 10px;
@@ -326,7 +339,7 @@ input{
     }
 }
 .nav-wrapper{
-    display: flex;
+    @include flexible ();
     align-items: center;
 }
 
@@ -372,7 +385,7 @@ ul.card-nav{
     }
 }
 li.bugs-item{
-    display: flex;
+    @include flexible ();
     align-items: center;
     justify-content: space-between;
     border-bottom: solid 2px rgb(163, 163, 163);
@@ -419,7 +432,7 @@ li.bugs-item{
     }
     .bugs-item__flags{
         width: 11%;
-        display: flex;
+        @include flexible ();
         justify-content: space-between;
     }
     @media screen  and (max-width: 500px){
@@ -492,6 +505,11 @@ li.bugs-item{
             right: 1em;
             color: #424242;
         }
+        ul{
+            a{
+                padding: 0 0;
+            }
+        }
     }
    
 }
@@ -499,7 +517,7 @@ li.bugs-item{
 .footer-list {
     margin: 0 1em;
     width: 20%;
-    display: flex;
+    @include flexible ();
     justify-content: space-between;
     .footer-item {
         padding: 0 2em;
@@ -559,7 +577,7 @@ li.bugs-item{
     }
     .contact-btn{
         width: 100%;
-        display: flex;
+        @include flexible ();
         justify-content: flex-end;
     }
     button{
@@ -614,7 +632,7 @@ li.bugs-item{
 @media screen and (max-width: 1000px){
     .contact-main{
         >.row{
-            display: flex;
+            @include flexible ();
             flex-direction: column-reverse;
             .card-wrap{
                 width: 100%;
