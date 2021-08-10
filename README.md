@@ -1,2 +1,2 @@
-# exam-1
+# example
 Materialize
